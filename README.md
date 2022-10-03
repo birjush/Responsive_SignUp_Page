@@ -1,3 +1,12 @@
+RESPONSIVE APPLICATION TO SIGN-UP AND DELETE RECORD FROM DATABASE
+
+Technologies Used
+
+ASP.NET
+MVC
+SQL
+BOOTSTAP
+
 ![image](https://user-images.githubusercontent.com/96921283/193556685-a8319a0a-241b-4191-91c0-96c3067a3209.png)
 
 ![image](https://user-images.githubusercontent.com/96921283/193556924-12f20056-a4a5-4746-898a-b21a5c03c0d8.png)
