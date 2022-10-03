@@ -1,0 +1,43 @@
+﻿@using ins_fetch_entity.Models
+@model List<TBLEmployee>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowEmp</title>
+</head>
+<body>
+    <div class="table-responsive"> 
+        <table class="table" border="1">
+            <tr>
+                    <td>Employee_ID</td>
+                    <td>Name</td>
+                    <td>City</td>
+                    <td>BOD</td>
+            </tr>
+
+            @foreach(TBLEmployee a in Model)
+            {
+                <tr>
+                    <th>@a.employeeId</th>
+                    <th>@a.name</th>
+                    <th>@a.city</th>
+                    <th>@a.dateofbirth</th>
+                </tr>
+            }
+        </table>
+        @using(Html.BeginForm("deleterecord","employee",FormMethod.Post))
+            {
+                <input type="text" placeholder="delete" name="delete"/>
+                <input type="submit" placeholder="Delete Record"/>
+            }
+
+    </div>
+</body>
+</html>

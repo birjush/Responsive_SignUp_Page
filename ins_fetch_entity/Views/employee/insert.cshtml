@@ -1,0 +1,60 @@
+﻿@using ins_fetch_entity.Models
+@model TBLEmployee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>insert</title>
+</head>
+<body>
+
+    <section class="h-100 h-custom" >
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="card rounded-3">
+                        <div class="card-body p-4 p-md-5" >
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2" style="background-color:red; display:inline-block">Registration Info</h3><br />
+                            <div class="px-md-2">
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-outline datepicker">
+
+                                            @using (Html.BeginForm("InsertData", "employee", FormMethod.Post))
+                                            {
+                                                <div class="form-outline mb-4">
+                                                    @Html.TextBoxFor(a => a.employeeId)
+                                                    <label>ID</label>
+                                                </div>
+                                                @Html.TextBoxFor(a => a.name)
+                                                <label>name</label>
+                                                @Html.TextBoxFor(a => a.city)
+                                                <label>city</label><br />
+                                                <div style="display:inline-block">
+                                                @Html.TextBoxFor(a => a.dateofbirth, "{0:MM/dd/yyyy}", new { @class = "form-control date", type = "date" })
+                                                </div>
+                                                <div style="display:inline-block">
+                                                <input type="submit" class="btn btn-success btn-lg mb-1" />
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+                    </div>
+                </div>
+        
+</section>
+</body>
+</html>
